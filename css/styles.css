@@ -13,6 +13,19 @@
   margin: 0px auto;
   padding: 20px 0px;
 }
+.modal-header{
+  background-color: #512DA8;
+}
+.modal-title{
+  color: floralwhite;;
+}
+.modal-content button{
+  color: floralwhite;
+}
+.modal-content
+{
+   background-color: #D1C4E9;
+}
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;

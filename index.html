@@ -28,9 +28,8 @@
           <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
         </ul>
-        <span class="navbar-text"><a data-toggle="modal" data-target="#loginModal">
-          <span class="fa fa-sign-in"></span>Login</a>
-        </span>
+        <span class="navbar-text">
+          <span class="fa fa-sign-in"></span><a id="loginSpan">Login</a></span>
       </div>
     </div>
   </nav>
@@ -77,7 +76,7 @@
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
                 <div class="col-12 col-sm-3 order-sm-last">
-                  <button class="btn btn-sm bg-warning text-white"><a data-toggle="modal" data-target="#reserveModal">Reserve Table</a></button>
+                  <button class="btn btn-sm bg-warning text-white" id="reserveButton">Reserve Table</button>
                 </div>
                 <div class="col-12 col-sm-3">
                 <img src="img/logo.png" class="img-fluid">
@@ -301,11 +300,21 @@
           else if ($('#carouselButton').children('span').hasClass('fa-play')) {
               $('#mycarousel').carousel('cycle');
               $('#carouselButton').children('span').removeClass('fa-play');
-              $('#carouselButton').children('span').addClass('fa-pause');         
+              $('#carouselButton').children('span').addClass('fa-pause');
           }
         });
       });
     </script>
+    <script>
+      $('#reserveButton').click(function() {
+        $('#reserveModal').modal('show')
+      });
+    </script>
+  <script>
+    $('#loginSpan').click(function() {
+      $('#loginModal').modal('show')
+    });
+  </script>
 </body>
 
 </html>
